@@ -9,15 +9,6 @@ html {
     scroll-behavior: smooth;
 }
 
-#neuralCanvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
 /* Custom Webkit Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
