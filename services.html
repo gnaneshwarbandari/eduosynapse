@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Commercial Proposals | EDUOSYNAPSE INFOTECH</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0284C7',
+                            cyan: '#06B6D4',
+                            dark: '#0F172A',
+                            light: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Glassmorphism Styling */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .glass-card-hover:hover {
+            border-color: rgba(6, 182, 212, 0.5);
+            box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.15);
+        }
+
+        /* Fixed background canvas setup */
+        #neuralCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-brand-light text-brand-dark antialiased selection:bg-brand-cyan selection:text-white relative flex flex-col min-h-screen">
+
+    <!-- Interactive Background Canvas -->
+    <canvas id="neuralCanvas"></canvas>
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-slate-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-brand-cyan to-brand-blue flex items-center justify-center text-white font-bold text-xl shadow-md shadow-brand-cyan/20">E</div>
+                <div>
+                    <span class="text-xl font-bold tracking-wider text-slate-900">EDUOSYNAPSE</span>
+                    <span class="block text-[10px] tracking-widest text-brand-blue font-mono uppercase">Infotech Pvt Ltd</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-brand-blue transition-colors">Home</a>
+                <a href="services.html" class="text-brand-blue font-semibold">Services</a>
+                <a href="courses.html" class="hover:text-brand-blue transition-colors">Courses & Showcase</a>
+                <a href="about.html" class="hover:text-brand-blue transition-colors">About Us</a>
+                <a href="contact.html" class="px-5 py-2.5 rounded-xl bg-brand-blue text-white font-semibold hover:bg-slate-900 transition-all shadow-md shadow-brand-blue/20">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Hero Title -->
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-6">
+                    <i data-lucide="layers" class="w-4 h-4 text-brand-cyan"></i>
+                    <span>Implementation Pathways</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+                    Commercial Proposals & <span class="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">Models</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed font-light">
+                    We offer flexible implementation structures tailored to suit every school's lab infrastructure, operational preference, and budget requirements.
+                </p>
+            </div>
+
+            <!-- Commercial Models Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                
+                <!-- Module A -->
+                <div class="glass-card p-8 rounded-2xl glass-card-hover transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-bold uppercase tracking-wider text-brand-blue mb-2">Module A</div>
+                        <h2 class="text-2xl font-bold text-slate-900 mb-3">School Owns the Kits</h2>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            The school purchases the electronics kits directly to build a permanent inventory and long-term hardware asset for their STEM labs.
+                        </p>
+                        
+                        <div class="bg-slate-50/90 p-4 rounded-xl mb-6 border border-slate-200/80">
+                            <div class="flex justify-between items-center border-b border-slate-200 pb-3 mb-3">
+                                <span class="text-xs font-semibold text-slate-700">Hardware Kit (Arduino, Sensors, Motors)</span>
+                                <span class="text-brand-blue font-bold text-sm">~₹1,150 / kit</span>
+                            </div>
+                            <div class="flex justify-between items-center text-xs text-slate-600">
+                                <span>Professional Training & Mentorship</span>
+                                <span class="font-semibold text-slate-900">₹4,500 / day</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan mr-3 shrink-0"></i>
+                            <span>Components procured and 100% bench-tested by us.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan mr-3 shrink-0"></i>
+                            <span>Includes IDE software setup & project guidance.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Module B -->
+                <div class="glass-card p-8 rounded-2xl border-2 border-brand-cyan/70 relative shadow-lg shadow-brand-cyan/10 flex flex-col justify-between">
+                    <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-brand-blue to-brand-cyan text-white text-[10px] font-extrabold uppercase px-3.5 py-1 rounded-full shadow-md tracking-wider">
+                        Highly Recommended
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold uppercase tracking-wider text-brand-cyan mb-2">Module B</div>
+                        <h2 class="text-2xl font-bold text-slate-900 mb-3">EDUOSYNAPSE Managed Kits</h2>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Zero hardware asset burden on the school. We manage the logistics, distribution, collection, and maintenance of all component kits.
+                        </p>
+                        
+                        <div class="bg-cyan-50/60 p-5 rounded-xl mb-6 border border-cyan-200/80 flex justify-between items-center">
+                            <div>
+                                <span class="text-xs font-bold text-slate-700 uppercase tracking-wider block">Flat Student Fee</span>
+                                <span class="text-xs text-slate-500">Includes all hardware & instruction</span>
+                            </div>
+                            <span class="text-3xl text-brand-blue font-extrabold">₹250 <span class="text-xs font-normal text-slate-500">/ student</span></span>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan mr-3 shrink-0"></i>
+                            <span>Complete hardware inventory logistics handled end-to-end.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan mr-3 shrink-0"></i>
+                            <span>Zero component maintenance or storage costs for the school.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan mr-3 shrink-0"></i>
+                            <span>Includes complete professional training, mentorship & kits.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Optional Add-ons -->
+            <div class="mb-16">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Optional Educational Add-ons</h3>
+                    <p class="text-sm text-slate-500">Extend learning beyond standard classroom hours</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="glass-card p-5 rounded-xl text-center glass-card-hover transition-all">
+                        <i data-lucide="users" class="w-6 h-6 text-brand-blue mx-auto mb-2"></i>
+                        <span class="text-sm font-semibold text-slate-800">Annual STEM Clubs</span>
+                    </div>
+                    <div class="glass-card p-5 rounded-xl text-center glass-card-hover transition-all">
+                        <i data-lucide="book-open-check" class="w-6 h-6 text-brand-blue mx-auto mb-2"></i>
+                        <span class="text-sm font-semibold text-slate-800">Teacher Training</span>
+                    </div>
+                    <div class="glass-card p-5 rounded-xl text-center glass-card-hover transition-all">
+                        <i data-lucide="trophy" class="w-6 h-6 text-brand-blue mx-auto mb-2"></i>
+                        <span class="text-sm font-semibold text-slate-800">Robotics Competitions</span>
+                    </div>
+                    <div class="glass-card p-5 rounded-xl text-center glass-card-hover transition-all">
+                        <i data-lucide="code" class="w-6 h-6 text-brand-blue mx-auto mb-2"></i>
+                        <span class="text-sm font-semibold text-slate-800">Student Hackathons</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hardware Policy Banner -->
+            <div class="glass-card p-6 rounded-2xl border border-indigo-200/80 bg-gradient-to-r from-indigo-50/80 to-cyan-50/50 flex flex-col md:flex-row items-start gap-5 shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
+                    <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-1.5">100% Quality Inspected & Testing Policy</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Every electronic component supplied by EDUOSYNAPSE is individually bench-tested prior to workshop distribution. However, due to the sensitive nature of microcontrollers and potential student handling errors (e.g., static discharge, wiring short-circuits), <strong>hardware components do not carry post-use warranties or guarantees.</strong> Minor consumable replacements will be managed seamlessly on-site during active training sessions.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-200 mt-auto relative z-10 bg-white/50 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-sm mb-4">&copy; 2026 EDUOSYNAPSE INFOTECH PVT LTD. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-slate-400 hover:text-brand-blue transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                <a href="#" class="text-slate-400 hover:text-brand-blue transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="#" class="text-slate-400 hover:text-brand-blue transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/particle-canvas.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

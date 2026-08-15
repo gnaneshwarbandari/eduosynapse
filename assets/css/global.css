@@ -1,0 +1,74 @@
+/* Light Theme Global Styles */
+:root {
+  --bg-primary-light: #FFFFFF; 
+  --bg-secondary-card: #F8FAFC; 
+  --border-color: #E2E8F0;
+  
+  --text-primary: #0F172A;    
+  --text-secondary: #475569;  
+  
+  --accent-cyan: #0284C7;
+  --accent-hover: #0369A1;
+}
+
+/* Glassmorphism Styling */
+.glass-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+.glass-card-hover:hover {
+    border-color: rgba(6, 182, 212, 0.5);
+    box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.15);
+}
+
+/* Fixed background canvas setup */
+#neuralCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-primary-light);
+    color: var(--text-primary);
+}
+
+body {
+    background-color: var(--bg-primary-light);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+#neuralCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+/* Custom Scrollbar for Light Theme */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0284C7;
+}

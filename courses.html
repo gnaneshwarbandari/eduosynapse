@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum & Showcase | EDUOSYNAPSE INFOTECH</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0284C7',
+                            cyan: '#06B6D4',
+                            dark: '#0F172A',
+                            light: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Glassmorphism Styling */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .glass-card-hover:hover {
+            border-color: rgba(6, 182, 212, 0.5);
+            box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.15);
+        }
+
+        /* Fixed background canvas setup */
+        #neuralCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-brand-light text-brand-dark antialiased selection:bg-brand-cyan selection:text-white relative flex flex-col min-h-screen">
+
+    <!-- Interactive Background Canvas -->
+    <canvas id="neuralCanvas"></canvas>
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-slate-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-brand-cyan to-brand-blue flex items-center justify-center text-white font-bold text-xl shadow-md shadow-brand-cyan/20">E</div>
+                <div>
+                    <span class="text-xl font-bold tracking-wider text-slate-900">EDUOSYNAPSE</span>
+                    <span class="block text-[10px] tracking-widest text-brand-blue font-mono uppercase">Infotech Pvt Ltd</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-brand-blue transition-colors">Home</a>
+                <a href="services.html" class="hover:text-brand-blue transition-colors">Services</a>
+                <a href="courses.html" class="text-brand-blue font-semibold">Courses & Showcase</a>
+                <a href="about.html" class="hover:text-brand-blue transition-colors">About Us</a>
+                <a href="contact.html"
+                    class="px-5 py-2.5 rounded-xl bg-brand-blue text-white font-semibold hover:bg-slate-900 transition-all shadow-md shadow-brand-blue/20">Contact
+                    Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Hero Title -->
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-6">
+                    <i data-lucide="book-open" class="w-4 h-4 text-brand-cyan"></i>
+                    <span>Hands-On Learning Track</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+                    IoT Bootcamp Curriculum <span class="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">(VI–X)</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed font-light">
+                    A progressive, practical syllabus designed to evolve students from fundamental electronics to advanced IoT system automation.
+                </p>
+            </div>
+
+            <!-- Curriculum Grids -->
+            <div class="space-y-8 mb-24">
+                
+                <!-- Class 6 & 7 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="glass-card p-6 rounded-2xl glass-card-hover transition-all">
+                        <div class="flex items-center space-x-3 mb-4 pb-3 border-b border-slate-200/80">
+                            <div class="w-8 h-8 rounded-lg bg-cyan-50 border border-cyan-200 flex items-center justify-center text-brand-blue">
+                                <i data-lucide="cpu" class="w-4 h-4"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-900">Class VI: Fundamentals</h2>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Blinking LED & Button Control:</strong> Understand digital outputs, circuits, and breadboard logic.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Buzzer Alert System:</strong> Learn electrical-to-sound energy conversion and frequency control.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Digital Dice & Electronic Quiz:</strong> Practice random logic generation and event-based execution.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Traffic Signal Simulator:</strong> Program timed multi-LED state sequencing.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl glass-card-hover transition-all">
+                        <div class="flex items-center space-x-3 mb-4 pb-3 border-b border-slate-200/80">
+                            <div class="w-8 h-8 rounded-lg bg-cyan-50 border border-cyan-200 flex items-center justify-center text-brand-blue">
+                                <i data-lucide="radio" class="w-4 h-4"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-900">Class VII: Sensing World</h2>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Ultrasonic Distance Measurement:</strong> Master sound wave reflection principles and range mapping.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Obstacle Detection Alarm:</strong> Trigger automated visual & acoustic alerts based on proximity thresholds.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Servo Motor Angle Control:</strong> Program precise rotational motion and pulse-width modulation.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Automatic Barrier Gate:</strong> Integrate distance sensors directly with mechanical servo arms.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Class 8 & 9 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="glass-card p-6 rounded-2xl glass-card-hover transition-all">
+                        <div class="flex items-center space-x-3 mb-4 pb-3 border-b border-slate-200/80">
+                            <div class="w-8 h-8 rounded-lg bg-cyan-50 border border-cyan-200 flex items-center justify-center text-brand-blue">
+                                <i data-lucide="tree-pine" class="w-4 h-4"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-900">Class VIII: Environmental Tech</h2>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Gas Leakage Detector:</strong> Monitor hazardous gas concentrations for automated safety response.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Soil Moisture Tester:</strong> Measure volumetric water content for smart agriculture applications.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Smart Plant Watering Alert:</strong> Trigger automated notifications when soil dryness thresholds pass.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Multi-Sensor Safety System:</strong> Combine diverse environmental variables into conditional multi-point safety logic.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl glass-card-hover transition-all">
+                        <div class="flex items-center space-x-3 mb-4 pb-3 border-b border-slate-200/80">
+                            <div class="w-8 h-8 rounded-lg bg-cyan-50 border border-cyan-200 flex items-center justify-center text-brand-blue">
+                                <i data-lucide="bot" class="w-4 h-4"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-900">Class IX: Automation</h2>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Automatic Dustbin (Servo):</strong> Touchless waste lid actuation using ultrasonic hands-free sensing.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Smart Water Tank Indicator:</strong> Monitor fluid levels accurately to eliminate overflow water wastage.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Smart Irrigation Prototype:</strong> Soil condition monitoring linked with active relay-driven water pumps.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-cyan mr-2 mt-0.5 shrink-0"></i>
+                                <span><strong>Intelligent Parking System:</strong> Space occupancy tracking with gate barriers and slot feedback.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Class 10 -->
+                <div class="glass-card p-6 md:p-8 rounded-2xl border-2 border-brand-cyan/60 shadow-lg shadow-brand-cyan/10">
+                    <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-200/80">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-cyan to-brand-blue flex items-center justify-center text-white shadow-md">
+                            <i data-lucide="rocket" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-[10px] font-extrabold uppercase tracking-widest text-brand-cyan">Advanced Capstone Track</div>
+                            <h2 class="text-2xl font-bold text-slate-900">Class X: System Integration</h2>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-600">
+                        <div class="flex items-start p-4 rounded-xl bg-slate-50/80 border border-slate-200/80">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-cyan mr-3 mt-0.5 shrink-0"></i>
+                            <div>
+                                <strong class="block text-slate-900 mb-1">Smart Home Automation</strong>
+                                <span>Simulate full-scale residential smart ecosystems with wireless relay switching, light sensing, and automated safety response.</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start p-4 rounded-xl bg-slate-50/80 border border-slate-200/80">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-cyan mr-3 mt-0.5 shrink-0"></i>
+                            <div>
+                                <strong class="block text-slate-900 mb-1">Industrial Gas Safety</strong>
+                                <span>Build industrial-grade environmental safety monitors with automated exhaust triggering and remote hazard alarms.</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start p-4 rounded-xl bg-slate-50/80 border border-slate-200/80">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-cyan mr-3 mt-0.5 shrink-0"></i>
+                            <div>
+                                <strong class="block text-slate-900 mb-1">Intelligent Entry Control</strong>
+                                <span>Program multi-factor automated access gates using security sensors, actuators, and visual status displays.</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start p-4 rounded-xl bg-slate-50/80 border border-slate-200/80">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-cyan mr-3 mt-0.5 shrink-0"></i>
+                            <div>
+                                <strong class="block text-slate-900 mb-1">Mini Smart City Model</strong>
+                                <span>Synthesize smart street lighting, automated safety, water management, and environmental monitoring into a comprehensive master prototype.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Student Showcase -->
+            <div class="border-t border-slate-200/80 pt-16">
+                <div class="text-center mb-12">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-4">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-cyan"></i>
+                        <span>Innovations in Action</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">Student Project Showcase</h2>
+                    <p class="text-slate-600 text-sm max-w-xl mx-auto">Explore functional prototypes engineered by school students during our hands-on practical sessions.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Card 1 -->
+                    <div class="glass-card rounded-2xl overflow-hidden glass-card-hover transition-all group">
+                        <div class="aspect-video bg-slate-900/90 flex items-center justify-center relative cursor-pointer overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent z-10"></div>
+                            <div class="w-12 h-12 rounded-full bg-brand-cyan/20 backdrop-blur-md border border-brand-cyan/50 flex items-center justify-center text-white z-20 group-hover:scale-110 transition-transform shadow-lg shadow-brand-cyan/30">
+                                <i data-lucide="play" class="w-5 h-5 fill-white ml-0.5"></i>
+                            </div>
+                            <span class="absolute bottom-3 right-3 z-20 text-[10px] font-mono bg-slate-900/80 backdrop-blur-sm border border-slate-700 px-2 py-0.5 rounded text-cyan-300">DEMO VIDEO</span>
+                        </div>
+                        <div class="p-5">
+                            <span class="text-[10px] font-bold tracking-widest text-brand-blue uppercase block mb-1">Class X Capstone</span>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">Smart Home Automation</h4>
+                            <p class="text-xs text-slate-500">Multi-relay activation & sensor feedback.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="glass-card rounded-2xl overflow-hidden glass-card-hover transition-all group">
+                        <div class="aspect-video bg-slate-900/90 flex items-center justify-center relative cursor-pointer overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent z-10"></div>
+                            <div class="w-12 h-12 rounded-full bg-brand-cyan/20 backdrop-blur-md border border-brand-cyan/50 flex items-center justify-center text-white z-20 group-hover:scale-110 transition-transform shadow-lg shadow-brand-cyan/30">
+                                <i data-lucide="play" class="w-5 h-5 fill-white ml-0.5"></i>
+                            </div>
+                            <span class="absolute bottom-3 right-3 z-20 text-[10px] font-mono bg-slate-900/80 backdrop-blur-sm border border-slate-700 px-2 py-0.5 rounded text-cyan-300">DEMO VIDEO</span>
+                        </div>
+                        <div class="p-5">
+                            <span class="text-[10px] font-bold tracking-widest text-brand-blue uppercase block mb-1">Class IX Project</span>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">Automatic Touchless Dustbin</h4>
+                            <p class="text-xs text-slate-500">Ultrasonic triggering & servo control.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glass-card rounded-2xl overflow-hidden glass-card-hover transition-all group">
+                        <div class="aspect-video bg-slate-900/90 flex items-center justify-center relative cursor-pointer overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent z-10"></div>
+                            <div class="w-12 h-12 rounded-full bg-brand-cyan/20 backdrop-blur-md border border-brand-cyan/50 flex items-center justify-center text-white z-20 group-hover:scale-110 transition-transform shadow-lg shadow-brand-cyan/30">
+                                <i data-lucide="play" class="w-5 h-5 fill-white ml-0.5"></i>
+                            </div>
+                            <span class="absolute bottom-3 right-3 z-20 text-[10px] font-mono bg-slate-900/80 backdrop-blur-sm border border-slate-700 px-2 py-0.5 rounded text-cyan-300">DEMO VIDEO</span>
+                        </div>
+                        <div class="p-5">
+                            <span class="text-[10px] font-bold tracking-widest text-brand-blue uppercase block mb-1">Class VIII Project</span>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">Gas Leakage Alert System</h4>
+                            <p class="text-xs text-slate-500">MQ-gas sensor logic & buzzer response.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="glass-card rounded-2xl overflow-hidden glass-card-hover transition-all group">
+                        <div class="aspect-video bg-slate-900/90 flex items-center justify-center relative cursor-pointer overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent z-10"></div>
+                            <div class="w-12 h-12 rounded-full bg-brand-cyan/20 backdrop-blur-md border border-brand-cyan/50 flex items-center justify-center text-white z-20 group-hover:scale-110 transition-transform shadow-lg shadow-brand-cyan/30">
+                                <i data-lucide="play" class="w-5 h-5 fill-white ml-0.5"></i>
+                            </div>
+                            <span class="absolute bottom-3 right-3 z-20 text-[10px] font-mono bg-slate-900/80 backdrop-blur-sm border border-slate-700 px-2 py-0.5 rounded text-cyan-300">DEMO VIDEO</span>
+                        </div>
+                        <div class="p-5">
+                            <span class="text-[10px] font-bold tracking-widest text-brand-blue uppercase block mb-1">Class VI Project</span>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">Smart Traffic Simulator</h4>
+                            <p class="text-xs text-slate-500">Timed LED state & sequence programming.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-200 mt-auto relative z-10 bg-white/50 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-sm mb-4">&copy; 2026 EDUOSYNAPSE INFOTECH PVT LTD. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-slate-400 hover:text-brand-blue transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                <a href="#" class="text-slate-400 hover:text-brand-blue transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="#" class="text-slate-400 hover:text-brand-blue transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/particle-canvas.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
