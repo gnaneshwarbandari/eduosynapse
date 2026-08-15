@@ -23,18 +23,19 @@
         }
     </script>
     <style>
-        /* Glassmorphism Styling */
+        /* Glassmorphism Styling for Sharp Text Contrast */
         .glass-card {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(226, 232, 240, 0.8);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
         }
         .glass-card-hover:hover {
             border-color: rgba(6, 182, 212, 0.5);
             box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.15);
         }
 
-        /* Fixed background canvas setup */
+        /* Fixed Background Canvas */
         #neuralCanvas {
             position: fixed;
             top: 0;
@@ -42,52 +43,53 @@
             width: 100vw;
             height: 100vh;
             z-index: 0;
-            pointer-events: none; /* Let pointer events pass to interactive UI elements */
+            pointer-events: none;
+            opacity: 0.85; /* Increased opacity for vivid visibility */
         }
     </style>
 </head>
 <body class="bg-brand-light text-brand-dark antialiased selection:bg-brand-cyan selection:text-white relative">
 
-    <!-- Interactive Background Canvas (Updated with Light Brand Aesthetic) -->
+    <!-- Interactive Canvas Layer -->
     <canvas id="neuralCanvas"></canvas>
 
     <!-- Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-slate-200/50">
+    <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="text-xl font-bold tracking-tight text-slate-900 flex items-center gap-2">
                 <span class="w-3 h-3 rounded-full bg-brand-cyan animate-pulse"></span>
                 Eduosynapse <span class="text-brand-blue font-normal text-base">Infotech</span>
             </a>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
                 <a href="#school-program" class="hover:text-brand-blue transition">School Innovators</a>
                 <a href="#tracks" class="hover:text-brand-blue transition">Learning Tracks</a>
                 <a href="#labs" class="hover:text-brand-blue transition">Lab Setup</a>
             </nav>
-            <a href="https://wa.me/" target="_blank" class="bg-brand-blue hover:bg-brand-blue/90 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition shadow-sm hover:shadow-md">
+            <a href="https://wa.me/" target="_blank" class="bg-brand-blue hover:bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition shadow-sm hover:shadow-md">
                 Talk to Expert
             </a>
         </div>
     </header>
 
     <main class="pt-20 relative z-10">
-        <!-- Hero Section -->
+        <!-- Hero Section (Vignette backdrop removed for maximum canvas visibility) -->
         <section class="min-h-[85vh] flex items-center justify-center relative px-6">
             <div class="max-w-4xl mx-auto text-center space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-brand-blue text-xs font-semibold tracking-wide">
-                    <span>HQ in Hyderabad</span> • Expansion Across India & Overseas
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-cyan-200 text-brand-blue text-xs font-bold tracking-wide shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-brand-cyan"></span> HQ in Hyderabad • Expansion Across India & Overseas
                 </div>
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
                     Bridging Curiosities to <br>
-                    <span class="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">Cutting-Edge Innovation</span>
+                    <span class="bg-gradient-to-r from-brand-blue via-sky-600 to-brand-cyan bg-clip-text text-transparent">Cutting-Edge Innovation</span>
                 </h1>
-                <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto font-light">
-                    Empowering young minds with hands-on mastery in IoT, Robotics, AI, and Next-Gen Technologies through practical custom kits and real-world projects.
+                <p class="text-lg md:text-xl text-slate-700 max-w-2xl mx-auto font-normal leading-relaxed drop-shadow-sm">
+                    Empowering young minds with hands-on mastery in IoT, Robotics, AI, and Next-Gen Technologies through practical custom hardware kits and real-world projects.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                    <a href="#enquire" class="w-full sm:w-auto bg-brand-blue hover:bg-slate-900 text-white px-8 py-3.5 rounded-xl font-medium transition shadow-lg shadow-brand-blue/20">
+                    <a href="#enquire" class="w-full sm:w-auto bg-brand-blue hover:bg-slate-900 text-white px-8 py-3.5 rounded-xl font-semibold transition shadow-lg shadow-brand-blue/20">
                         Book School Workshop
                     </a>
-                    <a href="#labs" class="w-full sm:w-auto glass-card hover:bg-white text-slate-700 px-8 py-3.5 rounded-xl font-medium transition border border-slate-300">
+                    <a href="#labs" class="w-full sm:w-auto glass-card hover:bg-white text-slate-800 px-8 py-3.5 rounded-xl font-semibold transition border border-slate-300 shadow-sm">
                         Explore Lab Setup
                     </a>
                 </div>
@@ -96,22 +98,22 @@
 
         <!-- K-12 Spotlight Section -->
         <section id="school-program" class="py-20 px-6 max-w-7xl mx-auto">
-            <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden glass-card-hover transition duration-300">
+            <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden glass-card-hover transition duration-300 shadow-sm">
                 <div class="max-w-2xl space-y-4">
-                    <span class="text-xs font-bold tracking-wider text-brand-cyan uppercase">Primary Focus</span>
+                    <span class="text-xs font-bold tracking-wider text-brand-blue uppercase bg-blue-50 px-3 py-1 rounded-md border border-blue-100">Primary Focus</span>
                     <h2 class="text-3xl font-bold text-slate-900">Empowering School Kids to Build the Future Today</h2>
-                    <p class="text-slate-600">We break down advanced engineering concepts into gamified, block-based, and modular hardware experiences specifically designed for K-12 students.</p>
-                    <ul class="space-y-3 pt-2 text-slate-700 text-sm">
+                    <p class="text-slate-700 leading-relaxed">We break down advanced engineering concepts into gamified, block-based, and modular hardware experiences specifically designed for K-12 students.</p>
+                    <ul class="space-y-3 pt-2 text-slate-800 text-sm font-medium">
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-5 h-5 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                             Dedicated STEM & DIY Microcontroller Hardware Kits
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-5 h-5 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                             Intensive 48-Hour Prototyping Bootcamps & Hackathons
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-5 h-5 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                             Smooth Learning Progression: Block Coding to Full Python Logic
                         </li>
                     </ul>
@@ -123,18 +125,18 @@
         <section id="labs" class="py-20 px-6 max-w-7xl mx-auto">
             <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
                 <h2 class="text-3xl font-bold text-slate-900">Institutional Innovation Labs</h2>
-                <p class="text-slate-600">Turnkey infrastructure, equipment provisioning, and curriculum mapping aligned with modern skill mandates.</p>
+                <p class="text-slate-700">Turnkey infrastructure, equipment provisioning, and curriculum mapping aligned with modern skill mandates.</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Tier 1 -->
-                <div class="glass-card p-8 rounded-2xl glass-card-hover transition flex flex-col justify-between">
+                <div class="glass-card p-8 rounded-2xl glass-card-hover transition flex flex-col justify-between shadow-sm">
                     <div class="space-y-4">
                         <h3 class="text-xl font-bold text-slate-900">Synapse Starter</h3>
-                        <p class="text-xs text-brand-blue font-semibold uppercase tracking-wider">15–20 Students</p>
-                        <p class="text-sm text-slate-600">Ideal for institutions introducing foundational STEM & DIY electronics modules.</p>
+                        <p class="text-xs text-brand-blue font-bold uppercase tracking-wider">15–20 Students</p>
+                        <p class="text-sm text-slate-700">Ideal for institutions introducing foundational STEM & DIY electronics modules.</p>
                         <hr class="border-slate-200">
-                        <ul class="text-sm text-slate-600 space-y-2">
+                        <ul class="text-sm text-slate-700 space-y-2 font-medium">
                             <li>• Basic Microcontroller Kits</li>
                             <li>• Sensor & Actuator Arrays</li>
                             <li>• Teacher Starter Orientation</li>
@@ -143,14 +145,14 @@
                 </div>
 
                 <!-- Tier 2 -->
-                <div class="glass-card p-8 rounded-2xl border-2 border-brand-cyan/40 relative glass-card-hover transition flex flex-col justify-between">
-                    <span class="absolute -top-3 right-6 bg-brand-cyan text-white text-xs px-3 py-1 rounded-full font-bold">Popular</span>
+                <div class="glass-card p-8 rounded-2xl border-2 border-brand-cyan/60 relative glass-card-hover transition flex flex-col justify-between shadow-md">
+                    <span class="absolute -top-3 right-6 bg-brand-cyan text-white text-xs px-3 py-1 rounded-full font-bold shadow-sm">Popular</span>
                     <div class="space-y-4">
                         <h3 class="text-xl font-bold text-slate-900">Robotics & IoT Hub</h3>
-                        <p class="text-xs text-brand-blue font-semibold uppercase tracking-wider">30+ Students</p>
-                        <p class="text-sm text-slate-600">Full-scale laboratory setup with advanced wireless, IoT, and mechanical prototyping kits.</p>
+                        <p class="text-xs text-brand-blue font-bold uppercase tracking-wider">30+ Students</p>
+                        <p class="text-sm text-slate-700">Full-scale laboratory setup with advanced wireless, IoT, and mechanical prototyping kits.</p>
                         <hr class="border-slate-200">
-                        <ul class="text-sm text-slate-600 space-y-2">
+                        <ul class="text-sm text-slate-700 space-y-2 font-medium">
                             <li>• ESP32 & Wireless IoT Modules</li>
                             <li>• 3D Printing Prototyping Unit</li>
                             <li>• Full Faculty TTP Certification</li>
@@ -159,13 +161,13 @@
                 </div>
 
                 <!-- Tier 3 -->
-                <div class="glass-card p-8 rounded-2xl glass-card-hover transition flex flex-col justify-between">
+                <div class="glass-card p-8 rounded-2xl glass-card-hover transition flex flex-col justify-between shadow-sm">
                     <div class="space-y-4">
                         <h3 class="text-xl font-bold text-slate-900">Next-Gen AI Campus</h3>
-                        <p class="text-xs text-brand-blue font-semibold uppercase tracking-wider">Custom Capacity</p>
-                        <p class="text-sm text-slate-600">Turnkey campus transformation featuring edge computing hardware and autonomous systems.</p>
+                        <p class="text-xs text-brand-blue font-bold uppercase tracking-wider">Custom Capacity</p>
+                        <p class="text-sm text-slate-700">Turnkey campus transformation featuring edge computing hardware and autonomous systems.</p>
                         <hr class="border-slate-200">
-                        <ul class="text-sm text-slate-600 space-y-2">
+                        <ul class="text-sm text-slate-700 space-y-2 font-medium">
                             <li>• Edge AI Vision Modules</li>
                             <li>• Autonomous Rover Hardware</li>
                             <li>• Dedicated On-Site Mentorship</li>
@@ -177,16 +179,16 @@
 
         <!-- Minimal Enquiry Lead Form -->
         <section id="enquire" class="py-20 px-6 max-w-3xl mx-auto">
-            <div class="glass-card rounded-3xl p-8 md:p-10 shadow-xl">
+            <div class="glass-card rounded-3xl p-8 md:p-10 shadow-xl border border-slate-200">
                 <div class="text-center space-y-2 mb-8">
                     <h2 class="text-2xl font-bold text-slate-900">Get in Touch with Our Curriculum Team</h2>
-                    <p class="text-sm text-slate-600">Request detailed syllabus brochures or custom lab setup consultations.</p>
+                    <p class="text-sm text-slate-700">Request detailed syllabus brochures or custom lab setup consultations.</p>
                 </div>
                 <form class="space-y-4">
                     <div class="grid md:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs font-semibold text-slate-600 mb-1">Your Role</label>
-                            <select class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-brand-blue">
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Your Role</label>
+                            <select class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm font-medium text-slate-800 focus:outline-none focus:border-brand-blue">
                                 <option>School Administrator / Principal</option>
                                 <option>Parent / Guardian</option>
                                 <option>College Student / Faculty</option>
@@ -194,20 +196,20 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-slate-600 mb-1">WhatsApp / Phone Number</label>
-                            <input type="tel" placeholder="+91 00000 00000" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-brand-blue" required>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">WhatsApp / Phone Number</label>
+                            <input type="tel" placeholder="+91 00000 00000" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm font-medium text-slate-800 focus:outline-none focus:border-brand-blue" required>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-slate-600 mb-1">Interested Program</label>
-                        <select class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-brand-blue">
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Interested Program</label>
+                        <select class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm font-medium text-slate-800 focus:outline-none focus:border-brand-blue">
                             <option>School Innovators Workshop</option>
                             <option>Turnkey Lab Setup Proposal</option>
                             <option>Teacher Training Program (TTP)</option>
                             <option>College Bootcamps / Hackathons</option>
                         </select>
                     </div>
-                    <button type="submit" class="w-full bg-brand-blue hover:bg-slate-900 text-white font-medium py-3 rounded-xl transition shadow-md">
+                    <button type="submit" class="w-full bg-brand-blue hover:bg-slate-900 text-white font-semibold py-3.5 rounded-xl transition shadow-md">
                         Request Information & Callback
                     </button>
                 </form>
@@ -215,23 +217,24 @@
         </section>
     </main>
 
-    <footer class="py-8 text-center text-xs text-slate-500 border-t border-slate-200 relative z-10">
+    <footer class="py-8 text-center text-xs text-slate-600 border-t border-slate-200 relative z-10 bg-white/50 backdrop-blur-sm">
         <p>© 2026 Eduosynapse Infotech Private Limited. All rights reserved.</p>
     </footer>
 
-    <!-- Interactive 2D Neural Matrix Canvas Engine (Color matched to Light Theme) -->
+    <!-- Interactive Canvas Script with Incremental Progressive Spawning -->
     <script>
         const canvas = document.getElementById('neuralCanvas');
         const ctx = canvas.getContext('2d');
 
         let nodes = [];
-        const nodeCount = 110;
-        const connectionDistance = 140;
+        const maxNodeCount = 110;
+        const connectionDistance = 145;
+        let spawnCounter = 0;
 
         const mouse = {
             x: null,
             y: null,
-            radius: 170
+            radius: 190
         };
 
         let currentScrollY = window.scrollY;
@@ -246,8 +249,9 @@
 
         class NeuralNode {
             constructor() {
+                // Wide initial scatter across screen to avoid central clumping
                 const angle = Math.random() * Math.PI * 2;
-                const radius = Math.random() * (Math.min(canvas.width, canvas.height) * 0.35);
+                const radius = Math.random() * (Math.min(canvas.width, canvas.height) * 0.45);
                 
                 this.baseX = canvas.width / 2 + Math.cos(angle) * radius;
                 this.baseY = canvas.height / 2 + Math.sin(angle) * radius;
@@ -255,18 +259,26 @@
                 this.x = this.baseX;
                 this.y = this.baseY;
                 
-                this.size = Math.random() * 2.5 + 1.5;
+                this.size = Math.random() * 2.2 + 1.2;
                 this.speedX = (Math.random() - 0.5) * 0.4;
                 this.speedY = (Math.random() - 0.5) * 0.4;
-                this.pulsePhase = Math.random() * Math.PI;
+                this.opacity = 0; // Fade in gradually when spawned
+                this.targetOpacity = Math.random() * 0.5 + 0.3;
+                this.isHighlighted = false;
             }
 
             update() {
                 this.baseX += this.speedX;
                 this.baseY += this.speedY;
 
+                // Smooth fade-in growth effect
+                if (this.opacity < this.targetOpacity) {
+                    this.opacity += 0.015;
+                }
+
                 let forceX = 0;
                 let forceY = 0;
+                this.isHighlighted = false;
 
                 if (mouse.x !== null && mouse.y !== null) {
                     let dx = mouse.x - this.x;
@@ -277,38 +289,43 @@
                         let force = (mouse.radius - distance) / mouse.radius;
                         forceX = (dx / distance) * force * 5;
                         forceY = (dy / distance) * force * 5;
+                        this.isHighlighted = true;
                     }
                 }
 
-                this.y += scrollVelocity * 0.4;
-                this.baseY += scrollVelocity * 0.15;
+                this.y += scrollVelocity * 0.35;
+                this.baseY += scrollVelocity * 0.12;
 
-                this.x += (this.baseX - this.x) * 0.06 + forceX;
-                this.y += (this.baseY - this.y) * 0.06 + forceY;
+                this.x += (this.baseX - this.x) * 0.05 + forceX;
+                this.y += (this.baseY - this.y) * 0.05 + forceY;
 
                 if (this.baseX < 0 || this.baseX > canvas.width) this.speedX *= -1;
                 if (this.baseY < 0 || this.baseY > canvas.height) this.speedY *= -1;
-
-                this.pulsePhase += 0.02;
             }
 
             draw() {
-                const alpha = 0.4 + Math.sin(this.pulsePhase) * 0.3;
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 
-                // Cyan node point with glowing highlight matching Eduosynapse light theme
-                ctx.fillStyle = `rgba(6, 182, 212, ${alpha})`;
-                ctx.shadowBlur = 8;
-                ctx.shadowColor = '#06B6D4';
+                if (this.isHighlighted) {
+                    ctx.fillStyle = 'rgba(6, 182, 212, 0.9)';
+                    ctx.shadowBlur = 12;
+                    ctx.shadowColor = '#06B6D4';
+                } else {
+                    ctx.fillStyle = `rgba(2, 132, 199, ${this.opacity})`;
+                    ctx.shadowBlur = 4;
+                    ctx.shadowColor = '#0284C7';
+                }
+                
                 ctx.fill();
                 ctx.shadowBlur = 0;
             }
         }
 
+        // Initialize with a few seed nodes, then incrementally spawn the rest
         function init() {
             nodes = [];
-            for (let i = 0; i < nodeCount; i++) {
+            for (let i = 0; i < 25; i++) {
                 nodes.push(new NeuralNode());
             }
         }
@@ -321,14 +338,16 @@
                     let distance = Math.sqrt(dx * dx + dy * dy);
 
                     if (distance < connectionDistance) {
-                        let opacity = (1 - (distance / connectionDistance)) * 0.22;
+                        // Blend line opacity with node fade status
+                        let baseLineOpacity = (1 - (distance / connectionDistance)) * 0.22;
+                        let lineOpacity = baseLineOpacity * Math.min(nodes[i].opacity, nodes[j].opacity);
+
                         ctx.beginPath();
                         ctx.moveTo(nodes[i].x, nodes[i].y);
                         ctx.lineTo(nodes[j].x, nodes[j].y);
                         
-                        // Electric blue line strokes matching `#0284C7`
-                        ctx.strokeStyle = `rgba(2, 132, 199, ${opacity})`;
-                        ctx.lineWidth = 0.9;
+                        ctx.strokeStyle = `rgba(2, 132, 199, ${lineOpacity})`;
+                        ctx.lineWidth = 0.85;
                         ctx.stroke();
                     }
                 }
@@ -338,6 +357,12 @@
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
+            // Progressive Spawns: Adds 1 new node every 3 frames until maximum density is reached
+            spawnCounter++;
+            if (nodes.length < maxNodeCount && spawnCounter % 3 === 0) {
+                nodes.push(new NeuralNode());
+            }
+
             scrollVelocity *= 0.9; 
 
             nodes.forEach(node => {
