@@ -3,8 +3,8 @@ if (canvas) {
     const ctx = canvas.getContext('2d');
 
     let nodes = [];
-    const nodeCount = 140;
-    const connectionDistance = 140;
+    let nodeCount = 140;
+    let connectionDistance = 140;
 
     const mouse = {
         x: null,
@@ -14,6 +14,23 @@ if (canvas) {
 
     let lastScrollY = window.scrollY;
 
+    // Dynamically adjust parameters based on screen width
+    function updateResponsiveConfig() {
+        if (window.innerWidth < 768) {
+            // Mobile screens
+            nodeCount = 70;
+            connectionDistance = 100;
+        } else if (window.innerWidth < 1200) {
+            // Tablet / Medium screens
+            nodeCount = 120;
+            connectionDistance = 120;
+        } else {
+            // Large desktop screens
+            nodeCount = 180;
+            connectionDistance = 140;
+        }
+    }
+
     function resizeCanvas() {
         const dpr = window.devicePixelRatio || 1;
         canvas.style.width = window.innerWidth + 'px';
@@ -21,10 +38,13 @@ if (canvas) {
         canvas.width = window.innerWidth * dpr;
         canvas.height = window.innerHeight * dpr;
         ctx.scale(dpr, dpr);
+
+        // Update counts and re-initialize nodes for the new screen size
+        updateResponsiveConfig();
+        init();
     }
 
     window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
 
     class NeuralNode {
         constructor() {
@@ -38,11 +58,9 @@ if (canvas) {
         }
 
         update(scrollDelta) {
-            // Natural drift combined with a fraction of the scroll movement
             this.x += this.speedX;
             this.y += this.speedY + (scrollDelta * 0.35);
 
-            // Mouse interaction
             if (mouse.x !== null && mouse.y !== null) {
                 let dx = mouse.x - this.x;
                 let dy = mouse.y - this.y;
@@ -55,7 +73,6 @@ if (canvas) {
                 }
             }
 
-            // Seamless boundary wrapping so nodes loop continuously across the screen while scrolling
             if (this.x < -20) this.x = window.innerWidth + 20;
             if (this.x > window.innerWidth + 20) this.x = -20;
             if (this.y < -20) this.y = window.innerHeight + 20;
@@ -108,7 +125,6 @@ if (canvas) {
     function animate() {
         ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
         
-        // Calculate the distance scrolled since the last frame
         const currentScrollY = window.scrollY;
         const scrollDelta = currentScrollY - lastScrollY;
         lastScrollY = currentScrollY;
@@ -132,6 +148,7 @@ if (canvas) {
         mouse.y = null;
     });
 
-    init();
+    // Initial setup call
+    resizeCanvas();
     animate();
 }

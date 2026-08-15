@@ -30,11 +30,11 @@
 <body
     class="bg-brand-light text-brand-dark antialiased selection:bg-brand-cyan selection:text-white relative flex flex-col min-h-screen">
 
-    <!-- Interactive Background Canvas (Light Theme Aesthetic) -->
+    <!-- Interactive Background Canvas (Locked Viewport Fixed Background) -->
     <canvas id="neuralCanvas"></canvas>
 
     <!-- Header / Navbar -->
-    <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-slate-200/50">
+    <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-slate-200/50 bg-white/80 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center space-x-3">
                 <div
@@ -46,15 +46,24 @@
                         Ltd</span>
                 </div>
             </a>
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="text-brand-blue font-semibold">Home</a>
-                <a href="services.html" class="hover:text-brand-blue transition-colors">Services</a>
-                <a href="courses.html" class="hover:text-brand-blue transition-colors">Courses & Showcase</a>
-                <a href="about.html" class="hover:text-brand-blue transition-colors">About Us</a>
-                <a href="contact.html"
-                    class="px-5 py-2.5 rounded-xl bg-brand-blue text-white font-semibold hover:bg-slate-900 transition-all shadow-md shadow-brand-blue/20">Contact
-                    Us</a>
-            </nav>
+
+            <!-- Mobile Hamburger Menu Button -->
+            <button class="hamburger md:hidden" id="hamburger-menu" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Links (Removed conflicting 'hidden' class) -->
+            <ul id="nav-links" class="nav-links md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <li><a href="index.html" class="text-brand-blue font-semibold">Home</a></li>
+                <li><a href="services.html" class="hover:text-brand-blue transition-colors">Services</a></li>
+                <li><a href="courses.html" class="hover:text-brand-blue transition-colors">Courses & Showcase</a></li>
+                <li><a href="about.html" class="hover:text-brand-blue transition-colors">About Us</a></li>
+                <li><a href="contact.html"
+                    class="px-5 py-2.5 rounded-xl bg-brand-blue text-white font-semibold hover:bg-slate-900 transition-all shadow-md shadow-brand-blue/20 inline-block">Contact
+                    Us</a></li>
+            </ul>
         </div>
     </header>
 
@@ -66,25 +75,23 @@
                 <div
                     class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-6">
                     <i data-lucide="cpu" class="w-4 h-4 text-brand-cyan"></i>
-                    <span>Transforming STEM Education</span>
+                    <span>HQ in Hyderabad</span> • Expansion Across India & Overseas
                 </div>
                 <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
-                    Empowering Next-Gen Innovators Through <span
-                        class="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">80%
-                        Practical STEM</span>
+                    Bridging Curiosities to <br>
+                    <span class="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">Cutting-Edge Innovation</span>
                 </h1>
                 <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-                    Bridging the academic-industry divide for Classes VI–X through hands-on IoT, Robotics, Artificial
-                    Intelligence, and Embedded Systems.
+                    Empowering young minds with hands-on mastery in IoT, Robotics, AI, and Next-Gen Technologies through practical custom kits and real-world projects.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                     <a href="contact.html"
                         class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-blue hover:bg-slate-900 text-white font-bold shadow-lg shadow-brand-blue/20 transition-all">
-                        Request School Proposal
+                        Book School Workshop
                     </a>
                     <a href="courses.html"
                         class="w-full sm:w-auto px-8 py-4 rounded-xl glass-card hover:bg-white border border-slate-300 text-slate-700 font-bold transition-all">
-                        Explore Curriculum
+                        Explore Lab Setup
                     </a>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -203,7 +210,6 @@
         </section>
 
         <!-- Network / Trust Section -->
-        <!-- Network / Trust Section (Slider) -->
         <section class="py-16 border-t border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 text-center">
                 <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-8">Trusted by Forward-Thinking
@@ -348,7 +354,6 @@
             </div>
         </div>
     </footer>
-
     <script src="assets/js/main.js"></script>
     <script src="assets/js/particle-canvas.js"></script>
     <script>

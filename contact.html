@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | EDUOSYNAPSE INFOTECH</title>
+    <title>EDUOSYNAPSE INFOTECH | 80% Practical STEM & IoT Education</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -23,30 +23,6 @@
             }
         }
     </script>
-    <style>
-        /* Glassmorphism Styling */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(226, 232, 240, 0.8);
-        }
-
-        .glass-card-hover:hover {
-            border-color: rgba(6, 182, 212, 0.5);
-            box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.15);
-        }
-
-        /* Fixed background canvas setup */
-        #neuralCanvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: 0;
-            pointer-events: none;
-        }
-    </style>
     <link rel="stylesheet" href="assets/css/global.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -54,11 +30,11 @@
 <body
     class="bg-brand-light text-brand-dark antialiased selection:bg-brand-cyan selection:text-white relative flex flex-col min-h-screen">
 
-    <!-- Interactive Background Canvas -->
+    <!-- Interactive Background Canvas (Locked Viewport Fixed Background) -->
     <canvas id="neuralCanvas"></canvas>
 
     <!-- Header / Navbar -->
-    <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-slate-200/50">
+    <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-slate-200/50 bg-white/80 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center space-x-3">
                 <div
@@ -70,15 +46,24 @@
                         Ltd</span>
                 </div>
             </a>
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-brand-blue transition-colors">Home</a>
-                <a href="services.html" class="hover:text-brand-blue transition-colors">Services</a>
-                <a href="courses.html" class="hover:text-brand-blue transition-colors">Courses & Showcase</a>
-                <a href="about.html" class="hover:text-brand-blue transition-colors">About Us</a>
-                <a href="contact.html"
-                    class="px-5 py-2.5 rounded-xl bg-brand-blue text-white font-semibold hover:bg-slate-900 transition-all shadow-md shadow-brand-blue/20">Contact
-                    Us</a>
-            </nav>
+
+            <!-- Mobile Hamburger Menu Button -->
+            <button class="hamburger md:hidden" id="hamburger-menu" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Links (Removed conflicting 'hidden' class) -->
+            <ul id="nav-links" class="nav-links md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <li><a href="index.html" class="hover:text-brand-blue transition-colors">Home</a></li>
+                <li><a href="services.html" class="hover:text-brand-blue transition-colors">Services</a></li>
+                <li><a href="courses.html" class="hover:text-brand-blue transition-colors">Courses & Showcase</a></li>
+                <li><a href="about.html" class="hover:text-brand-blue transition-colors">About Us</a></li>
+                <li><a href="contact.html"
+                    class="hover:text-brand-blue transition-colors px-5 py-2.5 rounded-xl bg-brand-blue text-white font-semibold hover:bg-slate-900 transition-all shadow-md shadow-brand-blue/20 inline-block">Contact
+                    Us</a></li>
+            </ul>
         </div>
     </header>
 
