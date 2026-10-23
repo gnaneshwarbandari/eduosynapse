@@ -7,15 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 2. Handle Contact Form Submission Simulation
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            // In a real scenario, this connects to a backend or webhook
-            alert('Thank you! Your inquiry has been submitted successfully. A representative from EDUOSYNAPSE will contact you shortly.');
-            contactForm.reset();
-        });
-    }
+    // const contactForm = document.getElementById('contactForm');
+    // if (contactForm) {
+    //     contactForm.addEventListener('submit', (e) => {
+    //         e.preventDefault();
+    //         // In a real scenario, this connects to a backend or webhook
+    //         alert('Thank you! Your inquiry has been submitted successfully. A representative from EDUOSYNAPSE will contact you shortly.');
+    //         contactForm.reset();
+    //     });
+    // }
 
     const hamburger = document.getElementById('hamburger-menu');
     const navLinks = document.getElementById('nav-links');
