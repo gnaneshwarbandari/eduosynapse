@@ -25,6 +25,21 @@
     </script>
     <link rel="stylesheet" href="assets/css/global.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#2563eb',
+                        'brand-cyan': '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google reCAPTCHA v3 Script -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld06fwtAAAAAJJDHGiHchpYG-lL-2EME-gZYIwO"></script>
 </head>
 
 <body
@@ -152,10 +167,11 @@
                             </div>
                         </div>
 
-                        <button type="submit"
+                        <button type="submit" id="submitBtn"
                             class="w-full py-4 mt-2 rounded-xl bg-gradient-to-r from-brand-blue to-brand-cyan text-white font-bold text-base hover:shadow-lg hover:shadow-brand-blue/25 hover:opacity-95 transition-all flex items-center justify-center space-x-2">
                             <span>Submit Request</span>
                             <i data-lucide="send" class="w-4 h-4"></i>
+                            <p id="formStatus" class="text-xs text-center mt-2 hidden"></p>
                         </button>
                     </form>
                 </div>
@@ -318,6 +334,7 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/particle-canvas.js"></script>
+    <script src="assets/js/form.js"></script>
     <script>
         lucide.createIcons();
     </script>
