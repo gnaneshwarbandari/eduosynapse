@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EDUOSYNAPSE INFOTECH | 80% Practical STEM & IoT Education</title>
+    <title>Services | EDUOSYNAPSE INFOTECH | Training, Bootcamps, WomEnpower & Electronics Consulting</title>
+    <meta name="description" content="Training, bootcamps for school kids, teacher training, the WomEnpower platform, electronics projects and consultation from Eduosynapse Infotech.">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -25,6 +27,32 @@
     </script>
     <link rel="stylesheet" href="assets/css/global.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+  .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+  .js .reveal.in{opacity:1;transform:none}
+  @keyframes floaty{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(4deg)}}
+  @keyframes spin-slow{to{transform:rotate(360deg)}}
+  @keyframes spin-rev{to{transform:rotate(-360deg)}}
+  @keyframes marquee{to{transform:translateX(-50%)}}
+  @keyframes pulse-ring{0%{transform:scale(.9);opacity:.6}100%{transform:scale(1.5);opacity:0}}
+  .floaty{animation:floaty 6s ease-in-out infinite}
+  .spin-slow{animation:spin-slow 28s linear infinite}
+  .spin-rev{animation:spin-rev 20s linear infinite}
+  .marquee-track{animation:marquee 30s linear infinite;width:max-content}
+  .dots{background-image:radial-gradient(rgba(255,255,255,.28) 1.5px,transparent 1.5px);background-size:22px 22px}
+  .tilt{transition:transform .35s ease,box-shadow .35s ease}
+  .tilt:hover{transform:translateY(-6px) rotate(-.6deg)}
+  .outline-num{-webkit-text-stroke:2px currentColor;color:transparent}
+  .tab-btn[aria-selected="true"]{background:linear-gradient(90deg,#0284C7,#06B6D4);color:#fff;border-color:transparent;box-shadow:0 8px 20px -8px rgba(2,132,199,.6)}
+  .panel[hidden]{display:none}
+  .spy.active{background:#0F172A;color:#fff;border-color:#0F172A}
+  @media (prefers-reduced-motion:reduce){
+    .floaty,.spin-slow,.spin-rev,.marquee-track{animation:none}
+    .js .reveal{opacity:1;transform:none;transition:none}
+  }
+</style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 
 <body
@@ -38,17 +66,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-lg flex items-center justify-center">
-                    <img src="./assets/images/logo_only.png" alt="Eduosynapse Infotech Logo"
+                    <img src="./assets/images/logo_nobg.png" alt="Eduosynapse Infotech Logo"
                         class="w-full h-full object-contain" />
                 </div>
-
                 <div>
-                    <span class="text-xl font-bold tracking-wider text-slate-900">
-                        EDUOSYNAPSE
-                    </span>
-                    <span class="block text-[10px] tracking-widest text-brand-blue font-mono uppercase">
-                        Infotech Pvt Ltd
-                    </span>
+                    <span class="text-xl font-bold tracking-wider text-slate-900">EDUOSYNAPSE</span>
+                    <span class="block text-[10px] tracking-widest text-brand-blue font-mono uppercase">Infotech Pvt Ltd</span>
                 </div>
             </a>
 
@@ -59,152 +82,410 @@
                 <span class="bar"></span>
             </button>
 
-            <!-- Navigation Links (Removed conflicting 'hidden' class) -->
             <ul id="nav-links" class="nav-links md:flex items-center space-x-8 text-sm font-medium text-slate-600">
                 <li><a href="index.html" class="hover:text-brand-blue transition-colors">Home</a></li>
                 <li><a href="services.html" class="text-brand-blue font-semibold">Services</a></li>
                 <li><a href="courses.html" class="hover:text-brand-blue transition-colors">Courses & Showcase</a></li>
                 <li><a href="about.html" class="hover:text-brand-blue transition-colors">About Us</a></li>
                 <li><a href="contact.html"
-                    class="px-5 py-2.5 rounded-xl bg-brand-blue text-white font-semibold hover:bg-slate-900 transition-all shadow-md shadow-brand-blue/20 inline-block">Contact
-                    Us</a></li>
+                        class="px-5 py-2.5 rounded-xl bg-brand-blue text-white font-semibold hover:bg-slate-900 transition-all shadow-md shadow-brand-blue/20 inline-block">Contact Us</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow pt-32 pb-20 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Hero Title -->
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-6">
-                    <i data-lucide="layers" class="w-4 h-4 text-brand-cyan"></i>
-                    <span>Implementation Pathways</span>
-                </div>
-                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
-                    Commercial Proposals & <span class="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">Models</span>
-                </h1>
-                <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed font-light">
-                    We offer flexible implementation structures tailored to suit every school's lab infrastructure, operational preference, and budget requirements.
-                </p>
-            </div>
+    <main class="flex-grow pt-20 relative z-10">
 
-            <!-- Commercial Models Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-                
-                <!-- Module A -->
-                <div class="glass-card p-8 rounded-2xl glass-card-hover transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="text-xs font-bold uppercase tracking-wider text-brand-blue mb-2">Module A</div>
-                        <h2 class="text-2xl font-bold text-slate-900 mb-3">School Owns the Kits</h2>
-                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-                            The school purchases the electronics kits directly to build a permanent inventory and long-term hardware asset for their STEM labs.
-                        </p>
-                        
-                        <div class="bg-slate-50/90 p-4 rounded-xl mb-6 border border-slate-200/80">
-                            <div class="flex justify-between items-center border-b border-slate-200 pb-3 mb-3">
-                                <span class="text-xs font-semibold text-slate-700">Hardware Kit (Arduino, Sensors, Motors)</span>
-                                <span class="text-brand-blue font-bold text-sm">~₹1,150 / kit</span>
-                            </div>
-                            <div class="flex justify-between items-center text-xs text-slate-600">
-                                <span>Professional Training & Mentorship</span>
-                                <span class="font-semibold text-slate-900">₹4,500 / day</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <ul class="space-y-3 text-sm text-slate-600">
-                        <li class="flex items-center">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan mr-3 shrink-0"></i>
-                            <span>Components procured and 100% bench-tested by us.</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan mr-3 shrink-0"></i>
-                            <span>Includes IDE software setup & project guidance.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Module B -->
-                <div class="glass-card p-8 rounded-2xl border-2 border-brand-cyan/70 relative shadow-lg shadow-brand-cyan/10 flex flex-col justify-between">
-                    <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-brand-blue to-brand-cyan text-white text-[10px] font-extrabold uppercase px-3.5 py-1 rounded-full shadow-md tracking-wider">
-                        Highly Recommended
-                    </div>
-                    <div>
-                        <div class="text-xs font-bold uppercase tracking-wider text-brand-cyan mb-2">Module B</div>
-                        <h2 class="text-2xl font-bold text-slate-900 mb-3">EDUOSYNAPSE Managed Kits</h2>
-                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-                            Zero hardware asset burden on the school. We manage the logistics, distribution, collection, and maintenance of all component kits.
-                        </p>
-                        
-                        <div class="bg-cyan-50/60 p-5 rounded-xl mb-6 border border-cyan-200/80 flex justify-between items-center">
-                            <div>
-                                <span class="text-xs font-bold text-slate-700 uppercase tracking-wider block">Flat Student Fee</span>
-                                <span class="text-xs text-slate-500">Includes all hardware & instruction</span>
-                            </div>
-                            <span class="text-3xl text-brand-blue font-extrabold">₹250 <span class="text-xs font-normal text-slate-500">/ student</span></span>
-                        </div>
-                    </div>
-
-                    <ul class="space-y-3 text-sm text-slate-600">
-                        <li class="flex items-center">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan mr-3 shrink-0"></i>
-                            <span>Complete hardware inventory logistics handled end-to-end.</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan mr-3 shrink-0"></i>
-                            <span>Zero component maintenance or storage costs for the school.</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan mr-3 shrink-0"></i>
-                            <span>Includes complete professional training, mentorship & kits.</span>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <!-- Optional Add-ons -->
-            <div class="mb-16">
-                <div class="text-center mb-8">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Optional Educational Add-ons</h3>
-                    <p class="text-sm text-slate-500">Extend learning beyond standard classroom hours</p>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="glass-card p-5 rounded-xl text-center glass-card-hover transition-all">
-                        <i data-lucide="users" class="w-6 h-6 text-brand-blue mx-auto mb-2"></i>
-                        <span class="text-sm font-semibold text-slate-800">Annual STEM Clubs</span>
-                    </div>
-                    <div class="glass-card p-5 rounded-xl text-center glass-card-hover transition-all">
-                        <i data-lucide="book-open-check" class="w-6 h-6 text-brand-blue mx-auto mb-2"></i>
-                        <span class="text-sm font-semibold text-slate-800">Teacher Training</span>
-                    </div>
-                    <div class="glass-card p-5 rounded-xl text-center glass-card-hover transition-all">
-                        <i data-lucide="trophy" class="w-6 h-6 text-brand-blue mx-auto mb-2"></i>
-                        <span class="text-sm font-semibold text-slate-800">Robotics Competitions</span>
-                    </div>
-                    <div class="glass-card p-5 rounded-xl text-center glass-card-hover transition-all">
-                        <i data-lucide="code" class="w-6 h-6 text-brand-blue mx-auto mb-2"></i>
-                        <span class="text-sm font-semibold text-slate-800">Student Hackathons</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hardware Policy Banner -->
-            <div class="glass-card p-6 rounded-2xl border border-indigo-200/80 bg-gradient-to-r from-indigo-50/80 to-cyan-50/50 flex flex-col md:flex-row items-start gap-5 shadow-sm">
-                <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
-                    <i data-lucide="shield-alert" class="w-6 h-6"></i>
-                </div>
+        <!-- ============ HERO ============ -->
+        <section class="relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-brand-cyan/20 blur-3xl"></div>
+            <div class="absolute top-20 right-0 w-96 h-96 rounded-full bg-brand-blue/20 blur-3xl"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center relative">
                 <div>
-                    <h4 class="font-bold text-slate-900 mb-1.5">100% Quality Inspected & Testing Policy</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed">
-                        Every electronic component supplied by EDUOSYNAPSE is individually bench-tested prior to workshop distribution. However, due to the sensitive nature of microcontrollers and potential student handling errors (e.g., static discharge, wiring short-circuits), <strong>hardware components do not carry post-use warranties or guarantees.</strong> Minor consumable replacements will be managed seamlessly on-site during active training sessions.
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-brand-blue text-xs font-semibold uppercase tracking-wider mb-6">
+                        <i data-lucide="layers" class="w-4 h-4 text-brand-cyan"></i>
+                        <span>Our Services</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.05] mb-6">
+                        Tech skills for<br>
+                        <span class="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">every learner.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 max-w-xl leading-relaxed font-light mb-8">
+                        From school bootcamps and teacher training to women-focused learning and custom electronics projects, we turn ideas into hands-on experiences that actually build something.
                     </p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#services" class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-brand-blue text-white font-semibold hover:bg-slate-900 transition-all shadow-lg shadow-brand-blue/25">
+                            <span>Explore Services</span><i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        </a>
+                        <a href="courses.html" class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold hover:border-brand-cyan hover:text-brand-blue transition-all">
+                            <span>View Courses</span>
+                        </a>
+                    </div>
+                    <dl class="grid grid-cols-3 gap-4 mt-10 max-w-md">
+                        <div><dt class="text-xs uppercase tracking-wider text-slate-500">Services</dt><dd class="text-3xl font-extrabold text-slate-900">5</dd></div>
+                        <div><dt class="text-xs uppercase tracking-wider text-slate-500">Hands-on</dt><dd class="text-3xl font-extrabold text-slate-900">80%</dd></div>
+                        <div><dt class="text-xs uppercase tracking-wider text-slate-500">Audiences</dt><dd class="text-3xl font-extrabold text-slate-900">4</dd></div>
+                    </dl>
+                </div>
+
+                <!-- Hero visual -->
+                <div class="relative h-[360px] sm:h-[440px] flex items-center justify-center" aria-hidden="true">
+                    <div class="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full border-2 border-dashed border-brand-cyan/40 spin-slow"></div>
+                    <div class="absolute w-52 h-52 sm:w-72 sm:h-72 rounded-full border-2 border-dashed border-brand-blue/30 spin-rev"></div>
+                    <div class="relative w-40 h-40 sm:w-52 sm:h-52 rounded-[2.5rem] bg-gradient-to-br from-brand-cyan to-brand-blue shadow-2xl shadow-brand-blue/40 flex items-center justify-center floaty">
+                        <div class="absolute inset-0 rounded-[2.5rem] dots"></div>
+                        <i data-lucide="handshake" class="w-20 h-20 sm:w-24 sm:h-24 text-white relative"></i>
+                    </div>
+                    <div class="absolute top-6 left-2 sm:left-10 floaty px-3 py-2 rounded-2xl bg-white shadow-xl border border-slate-100 flex items-center space-x-2" style="animation-delay:-1s">
+                        <i data-lucide="school" class="w-4 h-4 text-brand-blue"></i><span class="text-xs font-semibold text-slate-700">Schools</span></div>
+                    <div class="absolute top-16 right-0 sm:right-6 floaty px-3 py-2 rounded-2xl bg-white shadow-xl border border-slate-100 flex items-center space-x-2" style="animation-delay:-3s">
+                        <i data-lucide="book-open-check" class="w-4 h-4 text-emerald-500"></i><span class="text-xs font-semibold text-slate-700">Teachers</span></div>
+                    <div class="absolute bottom-16 left-0 sm:left-6 floaty px-3 py-2 rounded-2xl bg-white shadow-xl border border-slate-100 flex items-center space-x-2" style="animation-delay:-2s">
+                        <i data-lucide="heart-handshake" class="w-4 h-4 text-pink-500"></i><span class="text-xs font-semibold text-slate-700">WomEnpower</span></div>
+                    <div class="absolute bottom-6 right-4 sm:right-12 floaty px-3 py-2 rounded-2xl bg-white shadow-xl border border-slate-100 flex items-center space-x-2" style="animation-delay:-4s">
+                        <i data-lucide="circuit-board" class="w-4 h-4 text-amber-500"></i><span class="text-xs font-semibold text-slate-700">Projects</span></div>
                 </div>
             </div>
 
+            <!-- Ticker -->
+            <div class="bg-slate-900 text-cyan-200 py-3 overflow-hidden border-y border-slate-800" aria-hidden="true">
+                <div class="marquee-track flex space-x-10 text-sm font-mono uppercase tracking-widest whitespace-nowrap">
+                    <span>Training</span><span class="text-brand-cyan">&#9670;</span><span>Bootcamps</span><span class="text-brand-cyan">&#9670;</span><span>Teacher Development</span><span class="text-brand-cyan">&#9670;</span><span>WomEnpower</span><span class="text-brand-cyan">&#9670;</span><span>Electronics Projects</span><span class="text-brand-cyan">&#9670;</span><span>Consultation</span><span class="text-brand-cyan">&#9670;</span><span>Hands-On Learning</span><span class="text-brand-cyan">&#9670;</span><span>Training</span><span class="text-brand-cyan">&#9670;</span><span>Bootcamps</span><span class="text-brand-cyan">&#9670;</span><span>Teacher Development</span><span class="text-brand-cyan">&#9670;</span><span>WomEnpower</span><span class="text-brand-cyan">&#9670;</span><span>Electronics Projects</span><span class="text-brand-cyan">&#9670;</span><span>Consultation</span><span class="text-brand-cyan">&#9670;</span><span>Hands-On Learning</span><span class="text-brand-cyan">&#9670;</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ STICKY SERVICE NAV ============ -->
+        <div class="sticky top-20 z-40 bg-white/85 backdrop-blur-md border-b border-slate-200/70">
+            <nav aria-label="Service quick links" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex gap-2 overflow-x-auto text-sm whitespace-nowrap">
+                <a href="#training" data-spy="training" class="spy shrink-0 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-brand-cyan hover:text-brand-blue transition-colors">01 Training</a><a href="#bootcamps" data-spy="bootcamps" class="spy shrink-0 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-brand-cyan hover:text-brand-blue transition-colors">02 School Bootcamps</a><a href="#teachers" data-spy="teachers" class="spy shrink-0 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-brand-cyan hover:text-brand-blue transition-colors">03 Teacher Training</a><a href="#womenpower" data-spy="womenpower" class="spy shrink-0 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-brand-cyan hover:text-brand-blue transition-colors">04 WomEnpower</a><a href="#projects" data-spy="projects" class="spy shrink-0 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-brand-cyan hover:text-brand-blue transition-colors">05 Projects & Consultation</a>
+            </nav>
         </div>
+
+        <div id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-28 scroll-mt-32">
+
+            <!-- Training -->
+            <article id="training" class="reveal grid lg:grid-cols-2 gap-10 lg:gap-16 items-center scroll-mt-40">
+                <div class="relative ">
+                    
+                    <div class="tilt relative rounded-3xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-violet-500 to-indigo-600 shadow-2xl">
+                        <div class="absolute inset-0 dots"></div>
+                        <div class="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-white/10"></div>
+                        <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-white/10"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="floaty w-28 h-28 sm:w-36 sm:h-36 rounded-[2rem] bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center shadow-xl">
+                                <i data-lucide="graduation-cap" class="w-14 h-14 sm:w-20 sm:h-20 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="absolute top-6 left-6 floaty w-12 h-12 rounded-2xl bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-1.5s"><i data-lucide="code-2" class="w-6 h-6 text-violet-600"></i></div>
+                        <div class="absolute top-10 right-8 floaty w-11 h-11 rounded-full bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-3s"><i data-lucide="cpu" class="w-5 h-5 text-violet-600"></i></div>
+                        <div class="absolute bottom-24 left-10 floaty w-10 h-10 rounded-xl bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-4.5s"><i data-lucide="lightbulb" class="w-5 h-5 text-violet-600"></i></div>
+                        <div class="absolute bottom-0 inset-x-0 p-4 sm:p-5 bg-black/20 backdrop-blur-sm flex items-center justify-between gap-3"><span class="text-white text-xs font-bold tracking-widest">80% PRACTICAL</span><span class="flex-1 h-2.5 rounded-full bg-white/25 overflow-hidden"><span class="block h-full w-[80%] rounded-full bg-white"></span></span></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="outline-num text-5xl font-black text-violet-600">01</span>
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-violet-600">Learn by doing</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">Training</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-5">Practical, project-first training in IoT, electronics and coding. Learners spend most of their time building with real components, not just watching slides.</p>
+                    <div class="flex flex-wrap gap-2 mb-6"><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-violet-50 text-violet-700 border-violet-200">Project-first</span><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-violet-50 text-violet-700 border-violet-200">Instructor-led</span><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-violet-50 text-violet-700 border-violet-200">Real components</span></div>
+                    <div class="grid grid-cols-2 gap-3 mb-7">
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="hammer" class="w-3.5 h-3.5 text-violet-600"></i><span>Approach</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">80% hands-on practice</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="user-check" class="w-3.5 h-3.5 text-violet-600"></i><span>Led by</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">Expert instructors</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="package" class="w-3.5 h-3.5 text-violet-600"></i><span>Learning with</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">Real IoT kits</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="layers" class="w-3.5 h-3.5 text-violet-600"></i><span>Progression</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">Basics to advanced projects</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="contact.html" class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl text-white text-sm font-semibold transition-all shadow-lg bg-violet-600 hover:bg-violet-700"><span>Enquire About Training</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        <a href="courses.html" class="inline-flex items-center space-x-1.5 px-5 py-3 rounded-xl bg-white border border-slate-200 text-slate-700 text-sm font-semibold hover:border-slate-400 transition-all"><span>Browse all programs</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Bootcamps for School Kids -->
+            <article id="bootcamps" class="reveal grid lg:grid-cols-2 gap-10 lg:gap-16 items-center scroll-mt-40">
+                <div class="relative lg:order-2">
+                    
+                    <div class="tilt relative rounded-3xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-cyan-400 to-sky-600 shadow-2xl">
+                        <div class="absolute inset-0 dots"></div>
+                        <div class="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-white/10"></div>
+                        <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-white/10"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="floaty w-28 h-28 sm:w-36 sm:h-36 rounded-[2rem] bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center shadow-xl">
+                                <i data-lucide="zap" class="w-14 h-14 sm:w-20 sm:h-20 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="absolute top-6 left-6 floaty w-12 h-12 rounded-2xl bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-1.5s"><i data-lucide="rocket" class="w-6 h-6 text-cyan-600"></i></div>
+                        <div class="absolute top-10 right-8 floaty w-11 h-11 rounded-full bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-3s"><i data-lucide="wrench" class="w-5 h-5 text-cyan-600"></i></div>
+                        <div class="absolute bottom-24 left-10 floaty w-10 h-10 rounded-xl bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-4.5s"><i data-lucide="radio" class="w-5 h-5 text-cyan-600"></i></div>
+                        <div class="absolute bottom-0 inset-x-0 p-4 sm:p-5 bg-black/20 backdrop-blur-sm flex items-center justify-between gap-3"><span class="px-3 py-1.5 rounded-full bg-white/90 text-cyan-700 text-xs font-bold">1-Day Workshop</span><span class="px-3 py-1.5 rounded-full bg-white/20 text-white text-xs font-bold border border-white/40">Week-Long Camp</span></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="outline-num text-5xl font-black text-cyan-600">02</span>
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-cyan-600">For school kids</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">Bootcamps for School Kids</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-5">Energetic hands-on bootcamps that take students from curiosity to a working build. Choose a single-day experience or a week-long STEM camp with themed challenges. No experience needed.</p>
+                    <div class="flex flex-wrap gap-2 mb-6"><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-cyan-50 text-cyan-700 border-cyan-200">Themed challenges</span><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-cyan-50 text-cyan-700 border-cyan-200">Beginner friendly</span><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-cyan-50 text-cyan-700 border-cyan-200">Hands-on build</span></div>
+                    <div class="grid grid-cols-2 gap-3 mb-7">
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="users" class="w-3.5 h-3.5 text-cyan-600"></i><span>Ages</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">4-16</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="calendar" class="w-3.5 h-3.5 text-cyan-600"></i><span>Format</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">1-day workshop or week-long camp</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-cyan-600"></i><span>Options</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">Half-day or full-day</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="smile" class="w-3.5 h-3.5 text-cyan-600"></i><span>Experience</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">None needed</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="contact.html" class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl text-white text-sm font-semibold transition-all shadow-lg bg-cyan-600 hover:bg-cyan-700"><span>Bring a Bootcamp to Your School</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        <a href="courses.html#bootcamp" class="inline-flex items-center space-x-1.5 px-5 py-3 rounded-xl bg-white border border-slate-200 text-slate-700 text-sm font-semibold hover:border-slate-400 transition-all"><span>See the Discovery Bootcamp</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Teacher Training Programs -->
+            <article id="teachers" class="reveal grid lg:grid-cols-2 gap-10 lg:gap-16 items-center scroll-mt-40">
+                <div class="relative ">
+                    
+                    <div class="tilt relative rounded-3xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-emerald-400 to-teal-600 shadow-2xl">
+                        <div class="absolute inset-0 dots"></div>
+                        <div class="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-white/10"></div>
+                        <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-white/10"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="floaty w-28 h-28 sm:w-36 sm:h-36 rounded-[2rem] bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center shadow-xl">
+                                <i data-lucide="book-open-check" class="w-14 h-14 sm:w-20 sm:h-20 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="absolute top-6 left-6 floaty w-12 h-12 rounded-2xl bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-1.5s"><i data-lucide="presentation" class="w-6 h-6 text-emerald-600"></i></div>
+                        <div class="absolute top-10 right-8 floaty w-11 h-11 rounded-full bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-3s"><i data-lucide="notebook-pen" class="w-5 h-5 text-emerald-600"></i></div>
+                        <div class="absolute bottom-24 left-10 floaty w-10 h-10 rounded-xl bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-4.5s"><i data-lucide="lightbulb" class="w-5 h-5 text-emerald-600"></i></div>
+                        <div class="absolute bottom-0 inset-x-0 p-4 sm:p-5 bg-black/20 backdrop-blur-sm flex items-center justify-between gap-3"><span class="flex-1 text-center py-1.5 rounded-lg bg-white/25 text-white text-xs font-bold">LEARN</span><span class="flex-1 text-center py-1.5 rounded-lg bg-white/25 text-white text-xs font-bold">PRACTISE</span><span class="flex-1 text-center py-1.5 rounded-lg bg-white text-emerald-700 text-xs font-bold">TEACH</span></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="outline-num text-5xl font-black text-emerald-600">03</span>
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-600">For educators</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">Teacher Training Programs</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-5">We equip teachers with the skills and confidence to run IoT and electronics sessions themselves, so great STEM learning continues long after our visit.</p>
+                    <div class="flex flex-wrap gap-2 mb-6"><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-emerald-50 text-emerald-700 border-emerald-200">Hands-on for teachers</span><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-emerald-50 text-emerald-700 border-emerald-200">Lab-ready skills</span><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-emerald-50 text-emerald-700 border-emerald-200">Sustainable STEM</span></div>
+                    <div class="grid grid-cols-2 gap-3 mb-7">
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i><span>Audience</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">School teachers & educators</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="wrench" class="w-3.5 h-3.5 text-emerald-600"></i><span>Focus</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">Hands-on IoT and electronics</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="target" class="w-3.5 h-3.5 text-emerald-600"></i><span>Outcome</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">Confidence to run STEM labs</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="mail" class="w-3.5 h-3.5 text-emerald-600"></i><span>Format</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">Tailored to your school</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="contact.html" class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl text-white text-sm font-semibold transition-all shadow-lg bg-emerald-600 hover:bg-emerald-700"><span>Train Our Teachers</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        
+                    </div>
+                </div>
+            </article>
+
+            <!-- WomEnpower -->
+            <article id="womenpower" class="reveal grid lg:grid-cols-2 gap-10 lg:gap-16 items-center scroll-mt-40">
+                <div class="relative lg:order-2">
+                    <div class="absolute -top-3 left-6 z-10 px-3 py-1 rounded-full bg-slate-900 text-pink-300 text-[10px] font-extrabold tracking-widest shadow-lg">PLATFORM</div>
+                    <div class="tilt relative rounded-3xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-pink-500 to-rose-600 shadow-2xl">
+                        <div class="absolute inset-0 dots"></div>
+                        <div class="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-white/10"></div>
+                        <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-white/10"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="floaty w-28 h-28 sm:w-36 sm:h-36 rounded-[2rem] bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center shadow-xl">
+                                <i data-lucide="heart-handshake" class="w-14 h-14 sm:w-20 sm:h-20 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="absolute top-6 left-6 floaty w-12 h-12 rounded-2xl bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-1.5s"><i data-lucide="sparkles" class="w-6 h-6 text-pink-600"></i></div>
+                        <div class="absolute top-10 right-8 floaty w-11 h-11 rounded-full bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-3s"><i data-lucide="users" class="w-5 h-5 text-pink-600"></i></div>
+                        <div class="absolute bottom-24 left-10 floaty w-10 h-10 rounded-xl bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-4.5s"><i data-lucide="award" class="w-5 h-5 text-pink-600"></i></div>
+                        <div class="absolute bottom-0 inset-x-0 p-4 sm:p-5 bg-black/20 backdrop-blur-sm flex items-center justify-between gap-3"><i data-lucide="sparkles" class="w-5 h-5 text-white"></i><span class="text-white text-xs font-bold tracking-widest">EMPOWER THROUGH TECH</span></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="outline-num text-5xl font-black text-pink-600">04</span>
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-pink-600">Platform · Women in tech</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">WomEnpower</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-5">A platform built to empower women through technology. Learn practical electronics and IoT skills, build real projects and grow in a supportive community.</p>
+                    <div class="flex flex-wrap gap-2 mb-6"><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-pink-50 text-pink-700 border-pink-200">Skills</span><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-pink-50 text-pink-700 border-pink-200">Confidence</span><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-pink-50 text-pink-700 border-pink-200">Community</span></div>
+                    <div class="grid grid-cols-2 gap-3 mb-7">
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="user-round" class="w-3.5 h-3.5 text-pink-600"></i><span>Who</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">Women</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="cpu" class="w-3.5 h-3.5 text-pink-600"></i><span>Focus</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">Electronics and IoT skills</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="hand-heart" class="w-3.5 h-3.5 text-pink-600"></i><span>Approach</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">Hands-on, supportive community</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="mail" class="w-3.5 h-3.5 text-pink-600"></i><span>Join</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">Contact us to get started</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="contact.html" class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl text-white text-sm font-semibold transition-all shadow-lg bg-pink-600 hover:bg-pink-700"><span>Join WomEnpower</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        
+                    </div>
+                </div>
+            </article>
+
+            <!-- Electronics Projects & Consultation -->
+            <article id="projects" class="reveal grid lg:grid-cols-2 gap-10 lg:gap-16 items-center scroll-mt-40">
+                <div class="relative ">
+                    
+                    <div class="tilt relative rounded-3xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-amber-400 to-orange-600 shadow-2xl">
+                        <div class="absolute inset-0 dots"></div>
+                        <div class="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-white/10"></div>
+                        <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-white/10"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="floaty w-28 h-28 sm:w-36 sm:h-36 rounded-[2rem] bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center shadow-xl">
+                                <i data-lucide="circuit-board" class="w-14 h-14 sm:w-20 sm:h-20 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="absolute top-6 left-6 floaty w-12 h-12 rounded-2xl bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-1.5s"><i data-lucide="wrench" class="w-6 h-6 text-amber-600"></i></div>
+                        <div class="absolute top-10 right-8 floaty w-11 h-11 rounded-full bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-3s"><i data-lucide="cpu" class="w-5 h-5 text-amber-600"></i></div>
+                        <div class="absolute bottom-24 left-10 floaty w-10 h-10 rounded-xl bg-white/90 flex items-center justify-center shadow-lg" style="animation-delay:-4.5s"><i data-lucide="message-square" class="w-5 h-5 text-amber-600"></i></div>
+                        <div class="absolute bottom-0 inset-x-0 p-4 sm:p-5 bg-black/20 backdrop-blur-sm flex items-center justify-between gap-3"><span class="px-3 py-1.5 rounded-full bg-white/90 text-amber-700 text-xs font-bold">Projects</span><span class="px-3 py-1.5 rounded-full bg-white/20 text-white text-xs font-bold border border-white/40">Consultation</span></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="outline-num text-5xl font-black text-amber-600">05</span>
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-amber-600">Build & advise</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">Electronics Projects & Consultation</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-5">Have an idea that needs hardware? We design and build electronics and IoT projects, and offer expert consultation to help you plan, prototype and get it working.</p>
+                    <div class="flex flex-wrap gap-2 mb-6"><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-amber-50 text-amber-700 border-amber-200">Custom builds</span><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-amber-50 text-amber-700 border-amber-200">Prototyping</span><span class="px-3 py-1 rounded-full border text-xs font-semibold bg-amber-50 text-amber-700 border-amber-200">Expert advice</span></div>
+                    <div class="grid grid-cols-2 gap-3 mb-7">
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="circuit-board" class="w-3.5 h-3.5 text-amber-600"></i><span>Projects</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">Custom electronics and IoT builds</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="message-square" class="w-3.5 h-3.5 text-amber-600"></i><span>Consultation</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">Expert guidance and planning</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="users" class="w-3.5 h-3.5 text-amber-600"></i><span>Who for</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">Students, schools and innovators</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80">
+                            <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider text-slate-500 mb-1"><i data-lucide="mail" class="w-3.5 h-3.5 text-amber-600"></i><span>Start with</span></div>
+                            <div class="text-sm font-semibold text-slate-900 leading-snug">A quick conversation</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="contact.html" class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl text-white text-sm font-semibold transition-all shadow-lg bg-amber-600 hover:bg-amber-700"><span>Discuss Your Project</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- ============ FIND YOUR FIT ============ -->
+        <section id="fit" class="bg-gradient-to-b from-slate-50/0 via-cyan-50/70 to-slate-50/0 py-20 scroll-mt-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-3">Which service is right for you?</h2>
+                    <p class="text-slate-600 max-w-xl mx-auto">Tell us who you are and we will point you to the right door.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#bootcamps" class="reveal group relative rounded-3xl p-6 bg-white/90 border border-slate-200 hover:shadow-2xl transition-all overflow-hidden block">
+                    <div class="absolute -right-6 -top-6 w-28 h-28 rounded-full bg-gradient-to-br from-cyan-400 to-sky-600 opacity-20 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="outline-num text-5xl font-black text-slate-300 mb-4">01</div>
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-400 to-sky-600 flex items-center justify-center text-white mb-4 shadow-md"><i data-lucide="school" class="w-5 h-5"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Running a school?</h3>
+                    <p class="text-sm text-slate-600">Book <strong>Bootcamps</strong> or on-site <strong>Training</strong> for your students.</p>
+                </a>
+                <a href="#teachers" class="reveal group relative rounded-3xl p-6 bg-white/90 border border-slate-200 hover:shadow-2xl transition-all overflow-hidden block">
+                    <div class="absolute -right-6 -top-6 w-28 h-28 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 opacity-20 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="outline-num text-5xl font-black text-slate-300 mb-4">02</div>
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center text-white mb-4 shadow-md"><i data-lucide="book-open-check" class="w-5 h-5"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Are you a teacher?</h3>
+                    <p class="text-sm text-slate-600">Join our <strong>Teacher Training</strong> and run STEM labs with confidence.</p>
+                </a>
+                <a href="#womenpower" class="reveal group relative rounded-3xl p-6 bg-white/90 border border-slate-200 hover:shadow-2xl transition-all overflow-hidden block">
+                    <div class="absolute -right-6 -top-6 w-28 h-28 rounded-full bg-gradient-to-br from-pink-500 to-rose-600 opacity-20 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="outline-num text-5xl font-black text-slate-300 mb-4">03</div>
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white mb-4 shadow-md"><i data-lucide="heart-handshake" class="w-5 h-5"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Women who want to grow in tech?</h3>
+                    <p class="text-sm text-slate-600">Explore <strong>WomEnpower</strong> and build skills together.</p>
+                </a>
+                <a href="#projects" class="reveal group relative rounded-3xl p-6 bg-white/90 border border-slate-200 hover:shadow-2xl transition-all overflow-hidden block">
+                    <div class="absolute -right-6 -top-6 w-28 h-28 rounded-full bg-gradient-to-br from-amber-400 to-orange-600 opacity-20 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="outline-num text-5xl font-black text-slate-300 mb-4">04</div>
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center text-white mb-4 shadow-md"><i data-lucide="circuit-board" class="w-5 h-5"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Got an idea to build?</h3>
+                    <p class="text-sm text-slate-600">Talk to us about <strong>Projects &amp; Consultation</strong>.</p>
+                </a>
+                </div>
+                <p class="text-center text-sm text-slate-500 mt-8">Looking for programs for kids to join directly? <a href="courses.html" class="text-brand-blue font-semibold hover:underline">Explore our Courses</a>.</p>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+            <div class="reveal relative overflow-hidden rounded-3xl bg-slate-900 p-8 md:p-14 text-center">
+                <div class="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-brand-cyan/30 blur-3xl"></div>
+                <div class="absolute -bottom-24 -right-16 w-80 h-80 rounded-full bg-brand-blue/40 blur-3xl"></div>
+                <i data-lucide="settings" class="absolute right-8 top-6 w-24 h-24 text-white/5 spin-slow"></i>
+                <div class="relative">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">Let&rsquo;s build something together</h2>
+                    <p class="text-slate-300 max-w-xl mx-auto mb-8">Tell us about your school, team or idea and we will shape the right plan with you.</p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <a href="contact.html" class="inline-flex items-center space-x-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-blue to-brand-cyan text-white font-semibold shadow-lg shadow-brand-cyan/30 hover:scale-105 transition-transform"><span>Talk to Our Team</span><i data-lucide="message-circle" class="w-4 h-4"></i></a>
+                        <a href="courses.html" class="inline-flex items-center space-x-2 px-7 py-3.5 rounded-xl bg-white/10 border border-white/30 text-white font-semibold hover:bg-white/20 transition-all"><span>View Courses</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -223,6 +504,33 @@
     <script src="assets/js/particle-canvas.js"></script>
     <script>
         lucide.createIcons();
+
+        // Reveal on scroll
+        (function () {
+            var els = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+            }, { threshold: 0.12 });
+            els.forEach(function (e) { io.observe(e); });
+        })();
+
+        // Scroll-spy for the sticky program nav
+        (function () {
+            var links = document.querySelectorAll('.spy');
+            if (!('IntersectionObserver' in window)) return;
+            var spy = new IntersectionObserver(function (entries) {
+                entries.forEach(function (en) {
+                    if (en.isIntersecting) {
+                        links.forEach(function (l) { l.classList.toggle('active', l.dataset.spy === en.target.id); });
+                        var act = document.querySelector('.spy.active');
+                        if (act && act.scrollIntoView) act.scrollIntoView({ inline: 'center', block: 'nearest' });
+                    }
+                });
+            }, { rootMargin: '-40% 0px -55% 0px' });
+            links.forEach(function (l) { var t = document.getElementById(l.dataset.spy); if (t) spy.observe(t); });
+        })();
     </script>
 </body>
+
 </html>
